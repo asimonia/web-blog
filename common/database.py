@@ -1,6 +1,7 @@
 import pymongo
 
-class Databse:
+
+class Database:
 	URI = 'mongodb://127.0.0.1:27017'
 	DATABASE = None
 
@@ -14,9 +15,9 @@ class Databse:
 		Database.DATABASE[collection].insert(data)
 
 	@staticmethod
-	def find(collection, data):
+	def find(collection, query):
 		return Database.DATABASE[collection].find(query)
 
 	@staticmethod
-	def find_one(collection, data):
+	def find_one(collection, query):
 		return Database.DATABASE[collection].find_one(query)

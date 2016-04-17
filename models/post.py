@@ -1,5 +1,5 @@
 import uuid
-from commmon.database import Database
+from common.database import Database
 import datetime
 
 class Post:

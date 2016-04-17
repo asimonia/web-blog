@@ -4,12 +4,19 @@ from flask import Flask, render_template, request, session
 app = Flask(__name__)
 app.secret_key = "key"
 
+
 @app.route('/')
-def hello_method():
+def home_template():
+	return render_template('home.html')
+
+
+@app.route('/login')
+def login_template():
 	return render_template('login.html')
 
+
 @app.route('/register')
-def hello_method():
+def register_template():
 	return render_template('register.html')
 
 
